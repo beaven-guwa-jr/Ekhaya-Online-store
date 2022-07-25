@@ -1,0 +1,950 @@
+@font-face {
+  font-family: Akt-regular;
+  src: url(../fonts/Akrobat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Akt-light;
+  src: url(../fonts/Akrobat-Light.ttf);
+}
+
+@font-face {
+  font-family: Akt-bold;
+  src: url(../fonts/Akrobat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Akt-semibold;
+  src: url(../fonts/Akrobat-SemiBold.ttf);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+body * {
+  font-family: 'Akt-semibold';
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+header #drawing {
+  width: 16%;
+  height: auto;
+}
+
+header nav {
+  height: 10vh;
+}
+
+header nav .hamburger {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  z-index: 2;
+}
+
+header nav .hamburger .bar, header nav .hamburger:before, header nav .hamburger:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  padding-top: 4px;
+  margin: 6px 8px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header nav .hamburger.is-active:before {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+          transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+header nav .hamburger.is-active:after {
+  -webkit-transform: rotate(45deg) translate(-9px, -6px);
+          transform: rotate(45deg) translate(-9px, -6px);
+}
+
+header nav .hamburger.is-active .bar {
+  opacity: 0;
+}
+
+header nav .mobile-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  bottom: 100%;
+  left: 15%;
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  padding-top: 120px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-top: 50px;
+  z-index: 1;
+}
+
+header nav .mobile-nav.is-active {
+  bottom: 0;
+}
+
+header nav .desktop-nav {
+  display: none;
+}
+
+header nav li {
+  padding-top: 20px;
+}
+
+header nav a {
+  font-size: 20px;
+  padding: 50px 10px 0px 0px;
+  color: black;
+  text-decoration: none;
+}
+
+header .nav-brand .image {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header .banner {
+  height: 80vh;
+  background-image: url(../img/banner.png);
+  background-position: center;
+  background-size: cover;
+}
+
+header .banner .banner-text h1 {
+  font-family: 'Akt-regular';
+  font-size: 32px;
+}
+
+header .banner .banner-text li {
+  font-size: 18px;
+  padding-right: 14px;
+}
+
+.product-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-list .image {
+  width: 22%;
+}
+
+.product-list #image-2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.product-list .container .top {
+  padding-bottom: 70px;
+}
+
+.product-list .container .top h2 {
+  font-size: 18px;
+}
+
+.product-list .container .top input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  height: 30px;
+  font-size: 18px;
+  outline: none;
+}
+
+.product-list .container ul li {
+  font-size: 17px;
+  padding: 0px 0px 0px 0px;
+}
+
+.covid {
+  padding: 40px 0px 10px 0px;
+}
+
+.covid p {
+  font-size: 13px;
+}
+
+.covid #top-para {
+  background-color: #F2F2F2;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.covid .img-carousel .inner .image {
+  position: relative;
+}
+
+.covid .img-carousel i {
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+
+.top-selling .cards .card {
+  border: none;
+}
+
+.top-selling .cards .card .item #first {
+  width: 203px;
+  height: auto;
+}
+
+.top-selling .cards .card .item #second {
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+
+.top-selling .cards .card .item #fourth {
+  margin: 0 auto;
+  width: 161px;
+}
+
+.top-selling .cards .card .item #sixth {
+  margin: 0 auto;
+  width: 183px;
+}
+
+.top-selling .cards .card .item p {
+  font-size: 25px;
+  text-align: center;
+  padding: 15px 0px 20px;
+}
+
+.top-selling .cards .card .item .price {
+  padding-bottom: 36px;
+}
+
+.top-selling .cards .card .item .price h6 {
+  font-size: 31px;
+  font-family: 'Akt-bold';
+}
+
+.top-selling .cards .card .item a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  font-size: 21px;
+}
+
+.breakfast-club {
+  background-image: url(../img/mukul-wadhwa-xpo5BggQo3E-unsplash.png);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+.breakfast-club .slick-dots {
+  position: absolute;
+  right: 20px;
+  padding-top: 59px;
+}
+
+.breakfast-club .slick-dots button {
+  background: #FCC92F;
+  border: none;
+  outline: none;
+  color: #FCC92F;
+  border-radius: 5px;
+  width: 5px;
+  height: 20px;
+  padding: 0;
+  margin-top: 6px;
+}
+
+.breakfast-club .text P {
+  font-size: 20px;
+  font-family: 'Akt-bold';
+}
+
+.newsletter {
+  position: relative;
+  padding: 0px 0px 50px 0px;
+}
+
+.newsletter .buttons {
+  padding-top: 100px;
+}
+
+.newsletter .buttons button {
+  margin-right: 59px;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+}
+
+.newsletter .email input {
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 16px;
+}
+
+.newsletter .email i {
+  position: absolute;
+  left: 34%;
+}
+
+.newsletter p {
+  font-size: 22px;
+  padding: 22px 0px 30px 0;
+}
+
+.newsletter .image {
+  position: relative;
+  padding-top: 109px;
+  width: 205px;
+  height: auto;
+  z-index: 2;
+}
+
+.newsletter .circle-1 {
+  position: absolute;
+  top: 42%;
+  left: 35%;
+  z-index: 1;
+  width: 59px;
+}
+
+.newsletter .circle-2 {
+  position: absolute;
+  bottom: 39%;
+  right: 7%;
+  z-index: 1;
+  width: 59px;
+}
+
+.newsletter .circle-3 {
+  position: absolute;
+  bottom: 22%;
+  width: 27px;
+  left: 12px;
+}
+
+.newsletter .circle-4 {
+  position: absolute;
+  top: 38%;
+  right: 12%;
+  width: 27px;
+}
+
+.newsletter .logo {
+  padding-top: 90px;
+  width: 37%;
+  margin: 0 auto;
+}
+
+footer ul li {
+  padding-top: 45px;
+}
+
+footer ul li a {
+  font-size: 14px;
+}
+
+footer p {
+  font-size: 14px;
+  padding: 29px 0px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1028px) {
+  body h2 {
+    font-size: 51px;
+  }
+  header #drawing {
+    width: 20%;
+    height: 20%;
+  }
+  header nav #drawing {
+    width: 94.36px;
+    height: auto;
+  }
+  header nav .hamburger, header nav #mobile-brand {
+    display: none;
+  }
+  header nav .desktop-nav {
+    display: block;
+  }
+  header nav .desktop-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding-left: 16px;
+    font-size: 15px;
+  }
+  header .banner {
+    height: 60vh;
+    background-color: black;
+    background-image: url(../img/banner.png);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  header .banner .banner-text h1 {
+    font-size: 60px;
+  }
+  header .banner .banner-text ol li {
+    padding-right: 100px;
+  }
+  .product-list {
+    background-color: #F2F2F2;
+    margin-top: 61px;
+  }
+  .product-list .image {
+    width: 90px;
+  }
+  .product-list .container {
+    padding: 0px 0px 0px 50px;
+  }
+  .product-list .container .top {
+    padding-bottom: 70px;
+  }
+  .product-list .container .top h2 {
+    font-size: 51px;
+  }
+  .product-list .container .top input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    height: 30px;
+    font-size: 25px;
+    outline: none;
+  }
+  .product-list .container ul li {
+    font-size: 25px;
+    padding: 0px 0px 0px 0px;
+  }
+  .covid #top-para {
+    font-size: 25px;
+  }
+  .covid .img-carousel {
+    padding-left: 1 0px;
+    padding-top: 70px;
+  }
+  .covid .img-carousel i {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+  }
+  .covid .img-carousel .inner {
+    padding-right: 10px;
+  }
+  .covid .img-carousel .inner p {
+    font-size: 18px;
+    padding-right: 70px;
+  }
+  .top-selling, .off {
+    padding: 50px 0px 70px 0px;
+  }
+  .top-selling #second-carousel, .top-selling .img-carousel, .off #second-carousel, .off .img-carousel {
+    padding-top: 70px;
+  }
+  .top-selling #second-carousel button, .top-selling .img-carousel button, .off #second-carousel button, .off .img-carousel button {
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0px  10px;
+  }
+  .top-selling #second-carousel .right-arrow, .top-selling .img-carousel .right-arrow, .off #second-carousel .right-arrow, .off .img-carousel .right-arrow {
+    position: absolute;
+    top: 33%;
+    right: 0%;
+  }
+  .top-selling .cards .item .image, .off .cards .item .image {
+    width: 70%;
+  }
+  .top-selling .cards .item #first, .off .cards .item #first {
+    width: 110px;
+    margin: 0 auto;
+  }
+  .top-selling .cards .item #second, .off .cards .item #second {
+    width: 322px;
+    padding: 2px 0 0 45px;
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  .top-selling .cards .item #third, .off .cards .item #third {
+    width: 137px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .top-selling .cards .item p, .off .cards .item p {
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0px 20px;
+  }
+  .top-selling .cards .item .price, .off .cards .item .price {
+    padding-bottom: 36px;
+  }
+  .top-selling .cards .item .price h6, .off .cards .item .price h6 {
+    font-size: 25px;
+    font-family: 'Akt-bold';
+  }
+  .top-selling .cards .item a, .off .cards .item a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    font-size: 21px;
+  }
+  .breakfast-club {
+    position: relative;
+    height: 684px;
+  }
+  .breakfast-club .text P {
+    font-size: 42px;
+    font-family: 'Akt-bold';
+  }
+  .newsletter {
+    position: relative;
+    padding: 100px 0px 50px 0px;
+  }
+  .newsletter .buttons {
+    padding-top: 100px;
+  }
+  .newsletter .buttons button {
+    margin-right: 60px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+  }
+  .newsletter .email input {
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 34px;
+  }
+  .newsletter .email i {
+    position: absolute;
+    left: 24%;
+  }
+  .newsletter p {
+    font-size: 30px;
+    padding: 54px 0px 119px 0;
+  }
+  .newsletter .image {
+    position: relative;
+    padding: 100px 0px 0px 50px;
+    width: 317px;
+    height: auto;
+    z-index: 2;
+  }
+  .newsletter .circle-1 {
+    position: absolute;
+    top: 19%;
+    left: 63%;
+    z-index: 1;
+    width: 90px;
+  }
+  .newsletter .circle-2 {
+    position: absolute;
+    bottom: 57%;
+    right: 3%;
+    z-index: 1;
+    width: 90px;
+  }
+  .newsletter .circle-3 {
+    position: absolute;
+    bottom: 38%;
+  }
+  .newsletter .circle-4 {
+    position: absolute;
+    top: 12%;
+    right: 6%;
+  }
+  .newsletter .logo {
+    padding-top: 100px;
+  }
+  .newsletter #logo {
+    padding-top: 0px;
+  }
+  footer ul li {
+    padding-top: 45px;
+  }
+  footer ul li a {
+    font-size: 26px;
+  }
+  footer p {
+    font-size: 24px;
+    padding: 29px 0px;
+    margin: 0;
+  }
+  .products {
+    padding: 20px 0px 70px 0;
+    background-color: #000;
+  }
+  .products .inner .text h3 {
+    font-size: 22px;
+  }
+  .products .inner form {
+    height: 247px;
+    padding-top: 20px;
+  }
+  .products .inner form input, .products .inner form label {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+  }
+  .products .inner form #number {
+    border: none;
+    margin-bottom: 0;
+  }
+  .products .inner form button {
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body h2 {
+    font-size: 51px;
+  }
+  header #drawing {
+    width: 20%;
+    height: 20%;
+  }
+  header nav #drawing {
+    width: 71.34px;
+    height: auto;
+  }
+  header nav .hamburger, header nav #mobile-brand {
+    display: none;
+  }
+  header nav .desktop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .desktop-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    padding-left: 30px;
+    font-size: 25px;
+  }
+  header nav .desktop-nav ul li a.is-active {
+    background-color: red;
+  }
+  header .banner {
+    height: 80vh;
+    background-color: black;
+    background-image: url(../img/banner.png);
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  header .banner .banner-text h1 {
+    font-size: 60px;
+  }
+  header .banner .banner-text ol li {
+    padding-right: 100px;
+  }
+  .product-list {
+    background-color: #F2F2F2;
+    margin-top: 61px;
+  }
+  .product-list .image {
+    width: 112px;
+  }
+  .product-list .container {
+    padding: 0px 120px 0px 120px;
+  }
+  .product-list .container .top {
+    padding-bottom: 70px;
+  }
+  .product-list .container .top h2 {
+    font-size: 51px;
+  }
+  .product-list .container .top input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    height: 30px;
+    font-size: 25px;
+    outline: none;
+  }
+  .product-list .container ul li {
+    font-size: 33px;
+    padding: 0px 109px 37px 0px;
+  }
+  .covid #top-para {
+    font-size: 25px;
+    padding: 30px 0px;
+  }
+  .covid .img-carousel {
+    padding-left: 100px;
+    padding-top: 70px;
+  }
+  .covid .img-carousel i {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+  }
+  .covid .img-carousel .inner {
+    padding-right: 0px;
+  }
+  .covid .img-carousel .inner p {
+    font-size: 25px;
+    padding-right: 70px;
+  }
+  .top-selling, .off {
+    padding: 50px 0px 70px 0px;
+  }
+  .top-selling #second-carousel, .top-selling .img-carousel, .off #second-carousel, .off .img-carousel {
+    padding-top: 70px;
+  }
+  .top-selling #second-carousel button, .top-selling .img-carousel button, .off #second-carousel button, .off .img-carousel button {
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0px  10px;
+  }
+  .top-selling #second-carousel .right-arrow, .top-selling .img-carousel .right-arrow, .off #second-carousel .right-arrow, .off .img-carousel .right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+  }
+  .top-selling .cards .item #first, .off .cards .item #first {
+    width: 173px;
+    margin: 0 auto;
+  }
+  .top-selling .cards .item #second, .off .cards .item #second {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  .top-selling .cards .item #fourth, .off .cards .item #fourth {
+    margin: 0 auto;
+    width: 161px;
+  }
+  .top-selling .cards .item #sixth, .off .cards .item #sixth {
+    margin: 0 auto;
+    width: 183px;
+  }
+  .top-selling .cards .item p, .off .cards .item p {
+    font-size: 25px;
+    text-align: center;
+    padding: 15px 0px 20px;
+  }
+  .top-selling .cards .item .price, .off .cards .item .price {
+    padding-bottom: 36px;
+  }
+  .top-selling .cards .item .price h6, .off .cards .item .price h6 {
+    font-size: 31px;
+    font-family: 'Akt-bold';
+  }
+  .top-selling .cards .item a, .off .cards .item a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    font-size: 21px;
+  }
+  .breakfast-club {
+    position: relative;
+    height: 684px;
+  }
+  .breakfast-club .slick-dots {
+    position: absolute;
+    right: 20px;
+    padding-top: 75px;
+  }
+  .breakfast-club .slick-dots button {
+    background: #FCC92F;
+    border: none;
+    outline: none;
+    color: #FCC92F;
+    border-radius: 5px;
+    width: 5px;
+    height: 31px;
+    padding: 0;
+    margin-top: 6px;
+  }
+  .breakfast-club .text P {
+    font-size: 42px;
+    font-family: 'Akt-bold';
+  }
+  .newsletter {
+    position: relative;
+    padding: 100px 0px 50px 0px;
+  }
+  .newsletter .buttons {
+    padding-top: 100px;
+  }
+  .newsletter .buttons button {
+    margin-right: 124px;
+    font-size: 36px;
+    border-bottom: 2px solid black;
+  }
+  .newsletter .email input {
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 34px;
+  }
+  .newsletter .email i {
+    position: absolute;
+    left: 18%;
+  }
+  .newsletter p {
+    font-size: 30px;
+    padding: 54px 0px 119px 0;
+  }
+  .newsletter .image {
+    position: relative;
+    padding: 100px 0px 0px 50px;
+    width: 469px;
+    height: 526px;
+    z-index: 2;
+  }
+  .newsletter .circle-1 {
+    position: absolute;
+    top: 12%;
+    left: 60%;
+    z-index: 1;
+    width: 150px;
+  }
+  .newsletter .circle-2 {
+    position: absolute;
+    bottom: 57%;
+    right: 12%;
+    z-index: 1;
+    width: 150px;
+  }
+  .newsletter .circle-3 {
+    position: absolute;
+    bottom: 28%;
+    width: 90px;
+    right: 0;
+  }
+  .newsletter .circle-4 {
+    position: absolute;
+    top: 5%;
+    right: 12%;
+    width: 90px;
+  }
+  .newsletter .logo {
+    padding-top: 200px;
+  }
+  .newsletter #logo {
+    padding-top: 0px;
+  }
+  footer ul li {
+    padding-top: 45px;
+  }
+  footer ul li a {
+    font-size: 26px;
+  }
+  footer p {
+    font-size: 24px;
+    padding: 29px 0px;
+  }
+  .products {
+    padding: 20px 0px 70px 0;
+    background-color: #000;
+  }
+  .products .inner .text h3 {
+    font-size: 33px;
+  }
+  .products .inner form {
+    height: 247px;
+    padding-top: 20px;
+  }
+  .products .inner form input, .products .inner form label {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: white;
+  }
+  .products .inner form #number {
+    border: none;
+    margin-bottom: 0;
+  }
+  .products .inner form button {
+    width: 130px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
